@@ -1,10 +1,12 @@
 import React from 'react'
+import MovieByCategory from './Movie/MovieByCategory'
 
 const HomePage = () => {
+ 
   return (
-    <div>
-      <h1>Home Page Demo</h1>
-    </div>
+    <>
+      <MovieByCategory />
+    </>
   )
 }
 

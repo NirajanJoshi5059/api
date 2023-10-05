@@ -8,6 +8,7 @@ import {
     MenuList,
     MenuItem,
     Avatar,
+    Input,
 } from "@material-tailwind/react";
 
 import {
@@ -66,15 +67,29 @@ const Header = () => {
         <>
             <Navbar className="mx-auto max-w-screen-3xl p-2 px-6 py-1">
                 <div className="text-blue-gray-900 flex justify-between">
-                    <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-medium">
-                        <NavLink to='/'>  API MEAL </NavLink>
+                    <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold font-serif">
+                        <NavLink to='/'> MOVIE API  </NavLink>
                     </Typography>
+
+                    <div className="relative flex w-full md:w-max">
+                        <Input type="search"
+                            label="Type here..."
+                            className="pr-20"
+                            containerProps={{
+                                className: "min-w-[488px]",
+                            }}
+                        />
+                        <Button size="sm" className="!absolute right-1 top-1 rounded">
+                            Search
+                        </Button>
+                    </div>
 
                     <div className="flex items-center space-x-5">
                         <div className="space-x-5">
-                            <NavLink to='/about'>About</NavLink>
-                            <NavLink to='/contact'>Contact</NavLink>
-                            <NavLink to='/login'>Login</NavLink>
+                            {/* <NavLink to='/mealApi/category'>Meal Api</NavLink> */}
+                            <NavLink to='/movie/popular'>Popular</NavLink>
+                            <NavLink to='/movie/top_rated'>Top Rated</NavLink>
+                            <NavLink to='/movie/upcoming'>Upcoming</NavLink>
                         </div>
 
 
